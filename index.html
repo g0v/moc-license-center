@@ -12,9 +12,17 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <link rel="stylesheet" type="text/css" href="css/semantic.css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/semantic.js"></script>
+  
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/main.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -22,7 +30,18 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="ui gray labeled icon top right pointing dropdown button">
+            <i class="dropdown icon"></i>
+            <span class="text">g0v</span>
+            <div class="menu ui transition hidden">
+                <div class="item"><i class="home icon"></i>官方網站</div>
+                <div class="item"><i class="folder icon"></i>工作區</div>
+                <div class="item"><i class="download icon"></i>文化部授權中心</div>
+                <div class="item"><i class="download icon"></i>技術部軟體中心</div>
+            </div>
+        </div>
+
+        <span>there is going to be a search bar<i class="search icon"></i></span>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
