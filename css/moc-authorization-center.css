@@ -1,0 +1,47 @@
+body {
+	background-color: #eee;
+}
+
+#header {
+	background: #333;
+	padding: 1rem;
+	text-align: center;
+}
+
+.center {
+	display: inline;
+}
+
+#logo {
+	float: left;
+}
+
+#title {
+	display: inline;
+	margin-left: 3rem;
+	margin-right: 1rem;
+	font-size: 1.5rem;
+	line-height: 1rem;
+}
+
+#search {
+	width: 20rem;
+}
+
+.sort {
+	float: right;
+	display: inline-block;
+}
+
+#list {
+	padding: 1rem 1.5rem;
+	border-top: 1px #ccc solid;
+}
+
+.thumbnail {
+	float: left;
+	width: 16rem;
+	height: 12rem;
+	padding: 0.5rem;
+	margin: 1rem 0.5rem;
+}

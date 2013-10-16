@@ -15,13 +15,11 @@
         <link rel="stylesheet" type="text/css" href="css/semantic.css">
         <link rel="stylesheet" href="css/normalize.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/semantic.js"></script>
   
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="css/moc-authorization-center.css">
 
     </head>
     <body>
@@ -30,23 +28,65 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="ui gray labeled icon top right pointing dropdown button">
-            <i class="dropdown icon"></i>
-            <span class="text">g0v</span>
-            <div class="menu ui transition hidden">
-                <div class="item"><i class="home icon"></i>官方網站</div>
-                <div class="item"><i class="folder icon"></i>工作區</div>
-                <div class="item"><i class="download icon"></i>文化部授權中心</div>
-                <div class="item"><i class="download icon"></i>技術部軟體中心</div>
+        <div id="header">
+
+            <div id="logo" class="ui black labeled icon top right pointing dropdown button">
+                <i class="dropdown icon"></i>
+                <span class="text">g0v</span>
+                <div class="menu ui transition hidden">
+                    <div class="item"><i class="home icon"></i>官方網站</div>
+                    <div class="item"><i class="folder icon"></i>工作區</div>
+                    <div class="item"><i class="download icon"></i>文化部授權中心</div>
+                    <div class="item"><i class="download icon"></i>技術部軟體中心</div>
+                </div>
             </div>
+
+            <div class="sort ui black labeled icon top right pointing dropdown button">
+                <span>sort by</span>
+                <i class="dropdown icon"></i>
+                <span class="text">release date</span>
+                <div class="menu ui transition hidden">
+                    <div class="item"><i class="home icon"></i>release date</div>
+                    <div class="item"><i class="home icon"></i>file name</div>
+                    <div class="item"><i class="folder icon"></i>file type</div>
+                    <div class="item"><i class="download icon"></i>author</div>
+                    <div class="item"><i class="download icon"></i>related project</div>
+                    <div class="item"><i class="download icon"></i>tag</div>
+                </div>
+            </div>
+
+            <div class="center">
+
+                <h2 id="title" class="ui header inverted">
+                  文化部授權中心
+                </h2>
+
+                <div id="search" class="ui icon input">
+                  <input type="text" placeholder="找作品...">
+                  <i class="inverted search icon"></i>
+                </div>
+
+            </div>
+
         </div>
 
-        <span>there is going to be a search bar<i class="search icon"></i></span>
+        <div id="list">
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+            <div class="thumbnail rounded ui image"><img src="" />here is going to be a thumbnail</div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/semantic.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
