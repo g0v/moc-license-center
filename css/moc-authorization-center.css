@@ -8,10 +8,6 @@ body {
 	text-align: center;
 }
 
-.center {
-	display: inline;
-}
-
 #logo {
 	float: left;
 }
@@ -46,6 +42,7 @@ body {
 	background-color: #fff;
 	text-align: center;
 	line-height: 2rem;
+	position: relative;
 }
 
 .thumbnail img {
@@ -53,3 +50,25 @@ body {
 	margin: 0 auto;
 }
 
+.thumbnail .ui.ribbon.label {
+	position: absolute;
+	z-index: 1;
+	left: -0.8rem;
+}
+
+.wrapper {
+	box-sizing:border-box;
+	margin: 0 auto;
+	padding: 2rem;
+	width: 100%;
+	max-width: 1200px;
+}
+
+#preview {
+
+}
+
+#content {
+	border:none;
+	background: #333;
+}
