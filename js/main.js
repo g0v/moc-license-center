@@ -1,2 +1,1 @@
-$('#logo').dropdown();
-$('.sort').dropdown();
+$('.ui.dropdown').dropdown();
