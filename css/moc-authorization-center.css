@@ -2,6 +2,19 @@ body {
 	background-color: #eee;
 }
 
+div, ul, li, span, img, a {
+	box-sizing: border-box;	
+}
+
+a,
+a:hover,
+a:link,
+a:active {
+	text-decoration: none;
+	display: inline-block;
+	color: #666;
+}
+
 #header {
 	background: #333;
 	padding: 1rem;
@@ -33,6 +46,10 @@ body {
 	clear: both;
 }
 
+.clear {
+	clear: both;
+}
+
 .thumbnail {
 	float: left;
 	width: 16rem;
@@ -57,18 +74,93 @@ body {
 }
 
 .wrapper {
-	box-sizing:border-box;
 	margin: 0 auto;
 	padding: 2rem;
 	width: 100%;
 	max-width: 1200px;
 }
 
-#preview {
+ul {
+	margin: 0;
+	padding: 0;
+}
 
+ul li {
+	list-style: none;
+	float: left;
+}
+
+.image {
+	overflow: hidden;
+	position: relative;
+}
+
+.image img {
+	position: absolute;
+	width: 100%;
+	display: none;
+	border-radius: 0.5rem;
+	border: 1px #fff solid;
+}
+
+.image li:first-child img {
+	position: static;
+	display: block;
+}
+
+.image li img:target {
+	display: block;
+}
+
+.preview {
+	margin: 0.5rem 0;
+}
+
+.preview a {
+	display: inline-block;
+	width: 5rem;
+	margin: 0.5rem 0.25rem;
+	padding: 0.2rem;
+	background-color: #fff;	
+}
+
+.preview a:hover,
+.preview a:active,
+.preview a:focus {
+	background-color: orange;
+}
+
+.preview img {
+	width: 100%;
+}
+
+.meta {
+	padding: 1rem 0;
 }
 
 #content {
-	border:none;
-	background: #333;
+}
+
+#content h2 {
+	font-size: 2rem;
+	line-height: 1em;
+	margin: 0 0 1rem 0;
+}
+
+#content p {
+	border-bottom: 1px #ccc dashed;
+}
+
+#content p .text {
+	padding: 0 1rem 0 0;
+	display: inline;
+}
+
+#content .item {
+	margin: 0;
+	padding: 0.5rem 0;
+}
+
+#content div .description {
+	padding: 0.5rem 0;
 }
