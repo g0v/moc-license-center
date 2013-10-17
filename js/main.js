@@ -1,0 +1,2 @@
+$('#logo').dropdown();
+$('.sort').dropdown();
