@@ -1,9 +1,16 @@
+/*通用*/
+
 body {
 	background-color: #eee;
 }
 
 div, ul, li, span, img, a {
 	box-sizing: border-box;	
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
 }
 
 a,
@@ -15,10 +22,15 @@ a:active {
 	color: #666;
 }
 
-#header {
+#header,
+#footer {
 	background: #333;
 	padding: 1rem;
 	text-align: center;
+}
+
+#footer span {
+	margin-right: 1rem;
 }
 
 #logo {
@@ -28,7 +40,7 @@ a:active {
 #title {
 	display: inline;
 	margin-right: 1rem;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	line-height: 1rem;
 }
 
@@ -49,6 +61,8 @@ a:active {
 .clear {
 	clear: both;
 }
+
+/*授權中心專用*/
 
 .thumbnail {
 	float: left;
@@ -72,6 +86,8 @@ a:active {
 	z-index: 1;
 	left: -0.8rem;
 }
+
+/*授權中心單一作品頁面專用*/
 
 .wrapper {
 	margin: 0 auto;
@@ -163,4 +179,23 @@ ul li {
 
 #content div .description {
 	padding: 0.5rem 0;
+}
+
+/*軟體中心專用*/
+
+.software.logo {
+	width: 10rem;
+	height: 10rem;
+	background-color: #fff;
+	padding: 0.3rem;
+	float: left;
+}
+
+.software.summary {
+	margin-left: 11rem;
+
+}
+
+.software.column {
+	margin: 1rem 0;
 }
