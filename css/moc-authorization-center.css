@@ -191,6 +191,12 @@ ul li {
 	float: left;
 }
 
+.software.logo img {
+	width: 100%;
+	max-width: 10rem;
+	max-height: 10rem;
+}
+
 .software.summary {
 	margin-left: 11rem;
 
@@ -199,4 +205,8 @@ ul li {
 .software.column {
 	margin: 1rem 0;
 	min-height: 10rem;
+}
+
+.ui.label.horizontal {
+	margin: 0.3rem 0;
 }
