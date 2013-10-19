@@ -1,7 +1,7 @@
 /*通用*/
 
 body {
-	background-color: #eee;
+	background-color: #efefef;
 }
 
 div, ul, li, span, img, a {
@@ -33,7 +33,7 @@ a:active {
 	margin-right: 1rem;
 }
 
-#logo {
+#switch {
 	float: left;
 }
 
@@ -48,7 +48,7 @@ a:active {
 	width: 20rem;
 }
 
-.sort {
+#sort {
 	float: right;
 	display: inline-block;
 }
@@ -207,6 +207,11 @@ ul li {
 	min-height: 10rem;
 }
 
-.ui.label.horizontal {
-	margin: 0.3rem 0;
+.ui.horizontal.label {
+	margin: 0 0.5rem 0.5rem 0;
 }
+
+#footer .ui.button {
+	margin: 0 1rem 0 0;
+}
+
