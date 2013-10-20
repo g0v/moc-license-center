@@ -38,6 +38,10 @@ a:active {
 	background: #ccc;
 }
 
+#header.item {
+	height: 4.5rem;
+}
+
 #switch,
 #back {
 	float: left;
@@ -63,7 +67,8 @@ a:active {
 	display: inline-block;
 }
 
-#footer span {
+#footer span,
+#footer .ui.button {
 	margin-right: 1rem;
 }
 
@@ -159,24 +164,17 @@ ul li {
 	width: 100%;
 }
 
-.meta {
-	padding: 1rem 0;
-}
-
-#content {
-}
-
 #content h2 {
 	font-size: 2rem;
 	line-height: 1em;
 	margin: 0 0 1rem 0;
 }
 
-#content p {
+#content p.meta {
 	border-bottom: 1px #ccc dashed;
 }
 
-#content p .text {
+#content p.meta .text {
 	padding: 0 1rem 0 0;
 	display: inline;
 }
@@ -186,7 +184,7 @@ ul li {
 	padding: 0.5rem 0;
 }
 
-#content div .description {
+#content .file.meta {
 	padding: 0.5rem 0;
 }
 
@@ -216,14 +214,9 @@ ul li {
 	min-height: 10rem;
 }
 
-.ui.horizontal.label {
+.software .ui.horizontal.label {
 	margin: 0 0.5rem 0.5rem 0;
 }
-
-#footer .ui.button {
-	margin: 0 1rem 0 0;
-}
-
 
 h3.topic {
 	margin: 2rem 0;
