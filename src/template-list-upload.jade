@@ -1,0 +1,58 @@
+!!!5
+html
+  include head.jade
+
+  body
+
+    #header.upload
+
+      a#back.ui.labeled.icon.button.inverted(href='index.html')
+        i.left.icon
+        | 回授權中心
+      
+      h2#title.ui.header
+        | 文化部作品上傳
+
+      a#login.ui.button
+        | 登入
+
+    .wrapper
+
+      #action
+
+        #new.ui.labeled.icon.button
+          i.icon.plus
+          | 新增主題
+
+        #search.ui.icon.input
+          input(type='text', placeholder='找主題...')
+          i.search.icon
+
+        #sort.ui.labeled.icon.top.right.pointing.dropdown.button
+          span.text 依
+          i.dropdown.icon
+          span.text 新增日期
+          .menu.ui.transition.hidden
+            .item 新增日期
+            .item 作品名稱
+            .item 相關專案
+            .item 關鍵字
+
+      #list
+
+        block list
+
+    #footer.upload
+      span.ui.header.small 加入文化部
+      a.ui.labeled.icon.button(href='https://groups.google.com/forum/#!forum/g0v-moc', target='blank')
+        i.icon.url
+        | 群組討論區
+      a.ui.labeled.icon.button(href='http://hack.g0v.tw/g0vMOC/2ozguMQjfV5', target='blank')
+        i.icon.url
+        | 專案工作區
+      a.ui.labeled.icon.button(href='https://drive.google.com/folderview?id=0B0NsS2a-Qx8ZN19uV1p6YWd6TXc&usp=drive_web#', target='blank')
+        i.icon.url
+        | 檔案分享區
+
+    #script
+      include script.jade

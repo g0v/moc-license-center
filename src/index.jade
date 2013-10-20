@@ -1,4 +1,4 @@
-extends main.jade
+extends template-list
 
 block title
   | g0v 文化部授權中心
@@ -15,25 +15,18 @@ block header
       .item 作者
       .item 相關專案
       .item 關鍵字
-
-  div
-      h2#title.ui.header.inverted
-        | 文化部作品下載
-      #search.ui.icon.input
-        input(type='text', placeholder='找作品...')
-        i.inverted.search.icon
+  
+  h2#title.ui.header.inverted
+    | 文化部作品下載
+  #search.ui.icon.input
+    input(type='text', placeholder='找作品...')
+    i.inverted.search.icon
 
 block list
   include list-license.jade
 
 block footer
   span.ui.header.inverted.small 加入創作
-  a.ui.button.black(href='https://groups.google.com/forum/#!forum/g0v-moc', target='blank')
-    i.icon.url
-    | 群組討論區
-  a.ui.button.black(href='http://hack.g0v.tw/g0vMOC/2ozguMQjfV5', target='blank')
-    i.icon.url
-    | 專案工作區
-  a.ui.button.black(href='https://drive.google.com/folderview?id=0B0NsS2a-Qx8ZN19uV1p6YWd6TXc&usp=drive_web#', target='blank')
-    i.icon.url
-    | 檔案分享區
+  a.ui.labeled.icon.button.black(href='upload.html')
+    i.icon.upload
+    | 上傳作品

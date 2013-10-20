@@ -1,5 +1,6 @@
 semantic/
 .sass-cache/
+http_servlet_handler.rb
 
 #################
 ## Eclipse

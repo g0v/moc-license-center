@@ -24,27 +24,37 @@ a:active {
 
 #header,
 #footer {
-	background: #333;
 	padding: 1rem;
 	text-align: center;
 }
 
-#footer span {
-	margin-right: 1rem;
+#header.list,
+#footer.list {
+	background: #333;
 }
 
-#switch {
+#header.upload,
+#footer.upload {
+	background: #ccc;
+}
+
+#switch,
+#back {
 	float: left;
 }
 
-#title {
+#login {
+	float: right;
+}
+
+#header h2 {
 	display: inline;
-	margin-right: 1rem;
 	font-size: 1.2rem;
-	line-height: 1rem;
+	line-height: 2.5rem;
 }
 
 #search {
+	margin-left: 1rem;
 	width: 20rem;
 }
 
@@ -53,13 +63,19 @@ a:active {
 	display: inline-block;
 }
 
-.list {
-	padding: 1rem 1.5rem;
-	clear: both;
+#footer span {
+	margin-right: 1rem;
 }
 
-.clear {
-	clear: both;
+.list {
+	padding: 1rem 1.5rem;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 2rem;
+	width: 100%;
+	max-width: 1200px;
 }
 
 /*授權中心專用*/
@@ -88,13 +104,6 @@ a:active {
 }
 
 /*授權中心單一作品頁面專用*/
-
-.wrapper {
-	margin: 0 auto;
-	padding: 2rem;
-	width: 100%;
-	max-width: 1200px;
-}
 
 ul {
 	margin: 0;
@@ -215,3 +224,7 @@ ul li {
 	margin: 0 1rem 0 0;
 }
 
+
+h3.topic {
+	margin: 2rem 0;
+}
