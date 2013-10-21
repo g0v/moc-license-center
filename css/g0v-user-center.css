@@ -170,11 +170,12 @@ ul li {
 	margin: 0 0 1rem 0;
 }
 
-#content p.meta {
+p.meta {
 	border-bottom: 1px #ccc dashed;
+	padding: 0.5rem 0;
 }
 
-#content p.meta .text {
+p.meta .text {
 	padding: 0 1rem 0 0;
 	display: inline;
 }
@@ -218,6 +219,40 @@ ul li {
 	margin: 0 0.5rem 0.5rem 0;
 }
 
+/*上傳頁面專用*/
+
 h3.topic {
-	margin: 2rem 0;
+	padding: 1rem 0;
+	margin: 2rem 0 0 0;
+	border-bottom: 1px #ccc solid;
+}
+
+.topic.draft {
+	width: 10rem;
+	height: 10rem;
+	background-color: #fff;
+	padding: 0.3rem;
+	float: left;
+}
+
+.topic.draft img {
+	width: 100%;
+	max-width: 10rem;
+	max-height: 10rem;
+}
+
+.topic.summary {
+	margin-left: 11rem;
+}
+
+.topic.column {
+	min-height: 10rem;
+}
+
+.topic.action {
+	margin: 1rem 0;
+}
+
+.topic.action .button {
+	margin: 0 1rem 0 0;
 }
