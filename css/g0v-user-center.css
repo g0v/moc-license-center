@@ -23,7 +23,8 @@ a:active {
 }
 
 #header,
-#footer {
+#footer,
+#action {
 	padding: 1rem;
 	text-align: center;
 }
@@ -33,8 +34,8 @@ a:active {
 	background: #333;
 }
 
-#header.upload,
-#footer.upload {
+#header.idea,
+#footer.idea {
 	background: #ccc;
 }
 
@@ -43,22 +44,25 @@ a:active {
 }
 
 #switch,
-#back {
+#back,
+#new {
 	float: left;
 }
 
-#login {
+#login,
+#sort {
 	float: right;
 }
 
 #header h2 {
-	display: inline;
+	display: inline-block;
 	font-size: 1.2rem;
 	line-height: 2.5rem;
+	margin: 0;
+	padding: 0;
 }
 
 #search {
-	margin-left: 1rem;
 	width: 20rem;
 }
 
@@ -67,18 +71,16 @@ a:active {
 	display: inline-block;
 }
 
-#footer span,
 #footer .ui.button {
-	margin-right: 1rem;
+	margin-left: 1rem;
 }
 
-.list {
-	padding: 1rem 1.5rem;
+.wrap-vertical {
+	padding: 1rem;
 }
 
-.wrapper {
+.wrap-horizontal {
 	margin: 0 auto;
-	padding: 2rem;
 	width: 100%;
 	max-width: 1280px;
 }
@@ -170,6 +172,10 @@ ul li {
 	margin: 0 0 1rem 0;
 }
 
+p.description {
+	margin: 1rem 0;
+}
+
 p.meta {
 	border-bottom: 1px #ccc dashed;
 	padding: 0.5rem 0;
@@ -187,6 +193,10 @@ p.meta .text {
 
 #content .file.meta {
 	padding: 0.5rem 0;
+}
+
+#content .meta.group {
+	margin-bottom: 2rem;
 }
 
 /*軟體中心專用*/
@@ -213,13 +223,20 @@ p.meta .text {
 .software.column {
 	margin: 1rem 0;
 	min-height: 10rem;
+	width: 50%;
+	max-width: 40rem;
+	min-width: 30rem;
+}
+
+.software p {
+	margin: 1rem 0;
 }
 
 .software .ui.horizontal.label {
 	margin: 0 0.5rem 0.5rem 0;
 }
 
-/*上傳頁面專用*/
+/*idea頁面專用*/
 
 h3.topic {
 	padding: 1rem 0;
@@ -250,9 +267,9 @@ h3.topic {
 }
 
 .topic.action {
-	margin: 1rem 0;
+	margin-top: 1rem;
 }
 
 .topic.action .button {
-	margin: 0 1rem 0 0;
+	margin: 0 1rem 1rem 0;
 }
