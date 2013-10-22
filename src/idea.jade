@@ -1,18 +1,19 @@
-extends template-list-idea
+!!!5
+html
+  include head.jade
 
-block title
-  | 作品上傳區 | g0v 文化部授權中心
+  body
 
-block list
-  .idea.wrap-vertical.clearfix
-    .ui.horizontal.divider 網路中立系列  
-    .ui.grid
-      include idea-topic-column
-      include idea-topic-column
-      include idea-topic-column
-      include idea-topic-column
-    .ui.horizontal.divider 網路中立系列  
-    .ui.grid
-      include idea-topic-column
-      include idea-topic-column
-      include idea-topic-column
+    #header.item
+      a#back.ui.labeled.icon.button(href='ideas.html')
+        i.left.icon
+        | 回上一頁
+
+    #content.wrap-horizontal
+      block content
+
+    #footer.idea
+      block footer
+
+    #script
+      include script.jade
