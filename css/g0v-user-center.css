@@ -82,7 +82,7 @@ a:active {
 .wrap-horizontal {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1280px;
+	max-width: 1440px;
 }
 
 /*授權中心專用*/
@@ -201,6 +201,14 @@ p.meta .text {
 
 /*軟體中心專用*/
 
+.ui.grid.stackable .software.column {
+	margin: 1rem 0;
+	min-height: 10rem;
+	width: 45%;
+	max-width: 35rem;
+	min-width: 30rem;
+}
+
 .software.logo {
 	width: 10rem;
 	height: 10rem;
@@ -220,14 +228,6 @@ p.meta .text {
 
 }
 
-.software.column {
-	margin: 1rem 0;
-	min-height: 10rem;
-	width: 50%;
-	max-width: 40rem;
-	min-width: 30rem;
-}
-
 .software p {
 	margin: 1rem 0;
 }
@@ -238,10 +238,23 @@ p.meta .text {
 
 /*idea頁面專用*/
 
+.idea.wrap-vertical {
+	padding: 0 2rem 2rem 2rem;
+}
+
+.topic.column {
+	width: 50%;
+	min-width: 33rem;
+	max-width: 50rem;
+}
+
 h3.topic {
 	padding: 1rem 0;
-	margin: 2rem 0 0 0;
 	border-bottom: 1px #ccc solid;
+}
+
+.topic.content {
+	min-height: 10rem;
 }
 
 .topic.draft {
@@ -260,10 +273,6 @@ h3.topic {
 
 .topic.summary {
 	margin-left: 11rem;
-}
-
-.topic.column {
-	min-height: 10rem;
 }
 
 .topic.action {
