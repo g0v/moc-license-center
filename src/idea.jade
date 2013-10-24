@@ -4,12 +4,20 @@ html
 
   body
 
-    #header.item
+    #header.idea
+
       a#back.ui.labeled.icon.button(href='ideas.html')
         i.left.icon
-        | 回上一頁
+        | 回作品上傳區
+      
+      #login.ui.button
+        | 登入
 
-    #content.wrap-horizontal
+      h2#title.ui.header
+        block topic
+
+
+    #content.wrap-horizontal.wrap-vertical
       block content
 
     #footer.idea

@@ -75,8 +75,12 @@ a:active {
 	margin-left: 1rem;
 }
 
-.wrap-vertical {
+.wrap {
 	padding: 1rem;
+}
+
+.wrap-vertical {
+	padding: 1rem 0;
 }
 
 .wrap-horizontal {
@@ -102,6 +106,15 @@ a:active {
 .thumbnail img {
 	max-height: 10rem;
 	margin: 0 auto;
+}
+
+.thumbnail img.no-title {
+	max-height: 11rem;
+	margin: 0 auto;
+}
+
+.ui.button.thumbnail {
+	padding-top: 5rem;
 }
 
 .thumbnail .ui.ribbon.label {
