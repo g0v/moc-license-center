@@ -5,8 +5,8 @@
   -   var files=fs.readdirSync(folder); for(var i=0;i<files.length;i++){
   -     var target_file = folder+'/'+files[i];
   -     var target_path = folder+'.html';
-  -     var target_topic = target_path.slice(indexOf('/'),lastIndexOf('/'));
-  -     var target_author = folder.slice(lastIndexOf('/'));
+  -     var target_topic = target_path.slice(target_path.indexOf('/'),target_path.lastIndexOf('/'));
+  -     var target_author = folder.slice(folder.lastIndexOf('/'));
   -     var stat = fs.statSync(target_file);
   -     if(stat.isDirectory()){ result=result.concat(glob(target_file,regexp))}
   -     if(stat.isFile() && target_file.match(regexp)){ result.push([target_file,target_path,target_topic,target_author])}
