@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KKTIX Prototype</title>
+    <link type="text/css" rel="stylesheet" href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css' >
+</head>
+<body>
+    <%= li=[]
+        files=Dir.glob("**/*.{png,jpg}")
+        files.sort!
+        files.each do |path|
+            next if path =~ /^(tmp|_)/  || path =~ /\/_/ || path =~ /^vendor\//
+            title = open(path){|f| 
+                match = f.read().match(/<!-- kktix-page: (.*?) -->/)
+                match && match[1]
+            }
+            li << "<tr><td>#{title}</td><td>#{link_to("/#{path}", path.gsub(/(.*)\..*/,'/\1'))}"
+        end
+        "<table style='width:760px' class='table table-bordered table-striped'>#{li.join()}</table>"
+    %>
+</body>
+</html>

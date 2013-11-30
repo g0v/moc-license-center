@@ -17,7 +17,7 @@ class JadeHandler
       body = nil
 
       Dir.chdir(dir) do
-        body = Open3.popen3('node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path .') do |stdin, stdout, stderr|
+        body = Open3.popen3('node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path . -O "{require: require}"') do |stdin, stdout, stderr|
           template = open(base,'r'){|f| f.read}
 
           stdin.write template

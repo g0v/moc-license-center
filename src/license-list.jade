@@ -1,5 +1,28 @@
 .wrap.clearfix
+  - fs=require('fs');
+  - var glob=function(folder, regexp){
+  -   var result=[];
+  -   var files=fs.readdirSync(folder); for(var i=0;i<files.length;i++){
+  -     var target_file = folder+'/'+files[i];
+  -     var target_path = folder+'.html';
+  -     var target_topic = target_path.slice(indexOf('/'),lastIndexOf('/'));
+  -     var target_author = folder.slice(lastIndexOf('/'));
+  -     var stat = fs.statSync(target_file);
+  -     if(stat.isDirectory()){ result=result.concat(glob(target_file,regexp))}
+  -     if(stat.isFile() && target_file.match(regexp)){ result.push([target_file,target_path,target_topic,target_author])}
+  -   }
+  -   return result;
+  - };
   .ui.horizontal.divider 插畫
+  - files=(glob("../portfolio/illustration",/.(png|jpg)/))
+  each f in files
+    .thumbnail
+      .ui.ribbon.label.blue PSD
+      a(href=f[1])
+        img.rounded.ui.image(src=f[0])
+      p.topic=f[2]
+      span.ui.bottom.right.attached.label.small.circular.black=f[3]
+
   .thumbnail
     .ui.ribbon.label.blue PSD
     a(href='illustration-newshelper.html')
