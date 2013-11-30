@@ -10,7 +10,7 @@
   -     var target_author = folder.slice(folder.lastIndexOf('/')+1);
   -     var stat = fs.statSync(target_file);
   -     if(stat.isDirectory()){ result=result.concat(glob(target_file,regexp))}
-  -     if(stat.isFile() && target_file.match(regexp)){ result.push([target_file,target_path,target_topic,target_author])}
+  -     if(stat.isFile() && target_file.match(regexp)){ result.push([target_file.slice(3),target_path.slice(3),target_topic,target_author])}
   -   }
   -   return result;
   - };
@@ -24,6 +24,7 @@
       p.topic=f[2]
       span.ui.bottom.right.attached.label.small.circular.black=f[3]
 
+//-.tmp
   .thumbnail
     .ui.ribbon.label.blue PSD
     a(href='illustration-newshelper.html')
