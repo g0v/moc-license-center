@@ -1,6 +1,8 @@
 semantic/
 .sass-cache/
+tmp/
 http_servlet_handler.rb
+fire_app_log.txt
 
 #################
 ## Eclipse
