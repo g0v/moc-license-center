@@ -5,3 +5,5 @@
 prototype: http://g0v.github.io/moc-license-center/
 
 compile jade to html: jade -w src -o .
+
+create sample image: ruby create_image_sample.rb
