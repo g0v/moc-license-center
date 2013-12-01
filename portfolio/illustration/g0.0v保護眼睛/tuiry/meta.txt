@@ -1,0 +1,24 @@
+author:
+  twitter:
+  facebook:
+  tumblr:
+  plus:
+  email:
+
+license: CC-BY g0v.tw
+
+(download: PSD)
+
+type: 插畫
+field: g0v
+project: 新聞小幫手
+publish: 2013.01.01
+update: 2013.01.01
+
+inspired:
+
+concept:
+
+use:
+
+idea:
