@@ -16,3 +16,6 @@
 2013-11-30 21:50:48    create css/print.css 
 2013-11-30 21:50:49    create css/screen.css 
 2013-11-30 21:50:50    Create list.html
+2013-12-01 14:42:20 identical css/print.css 
+2013-12-01 14:42:20 identical css/ie.css 
+2013-12-01 14:42:22 identical css/screen.css 
