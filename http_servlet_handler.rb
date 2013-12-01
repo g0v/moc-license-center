@@ -15,9 +15,15 @@ class JadeHandler
       base = File.basename(path)
       dir = File.dirname(path) + "/src"
       body = nil
-
+      
       Dir.chdir(dir) do
-        body = Open3.popen3('node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path . -O "{require: require}"') do |stdin, stdout, stderr|
+        if File.exists?('c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade')
+          jade_cmd = 'node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path . -O "{require: require}" -P ' 
+        else
+          jade_cmd = 'jade --path . -O "{require: require}" -P'
+        end
+
+        body = Open3.popen3(jade_cmd ) do |stdin, stdout, stderr|
           template = open(base,'r'){|f| f.read}
 
           stdin.write template
