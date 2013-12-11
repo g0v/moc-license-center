@@ -8,6 +8,7 @@
   -     var target_topic_path = target_path.slice(0,target_path.lastIndexOf('/'));
   -     var target_topic = target_topic_path.slice(target_topic_path.lastIndexOf('/')+1);
   -     var target_author = folder.slice(folder.lastIndexOf('/')+1);
+  -     var meta = folder+'/meta.json';
   -     var stat = fs.statSync(target_file);
   -     if(stat.isDirectory()){ result=result.concat(glob(target_file,regexp))}
   -     if(stat.isFile() && target_file.match(regexp)){ result.push([target_file.slice(3),target_path.slice(3),target_topic,target_author])}
@@ -20,7 +21,7 @@
     .thumbnail
       .ui.ribbon.label.blue PSD
       a(href=f[1])
-        img.rounded.ui.image(src="sample_images/"+f[0])
+        img.rounded.ui.image(src=f[0])
       p.topic=f[2]
       span.ui.bottom.right.attached.label.small.circular.black=f[3]
 
