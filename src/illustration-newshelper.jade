@@ -1,94 +1,76 @@
 extends illustration
 
 block title
-  | 新聞小幫手 | 插畫 | g0v 文化部授權中心
+  | #{project} | #{type} | g0v 文化部授權中心
 
 block content
-  .wrap
-    .ui.column.stackable.divided.grid
-      .row
-        .two.wide.column
-          .image
-            ul
-              li
-                img#image01(src='gallery/newshelper/01.png')
-              li
-                img#image02(src='gallery/newshelper/02.png')
-              li
-                img#image03(src='gallery/newshelper/03.png')
-              li
-                img#image04(src='gallery/newshelper/04.png')
-              li
-                img#image05(src='gallery/newshelper/05.png')
-          .preview.clearfix
-            ul
-              li
-                a(href='#image01')
-                  img(src='gallery/newshelper/01.png')
-              li
-                a(href='#image02')
-                  img(src='gallery/newshelper/02.png')
-              li
-                a(href='#image03')
-                  img(src='gallery/newshelper/03.png')
-              li
-                a(href='#image04')
-                  img(src='gallery/newshelper/04.png')
-              li
-                a(href='#image05')
-                  img(src='gallery/newshelper/05.png')
-          .description
-            .ui.horizontal.divider 作品簡介
-            h3 靈感來源
-            p.description
-              | 傳陳冠希示愛，AV版《神鬼奇航》，冏編的哥哥的女友的朋友的三叔...目前還失業找不到工作哩...難不成水果報有聽到我的心聲，尼克狂贏17分，變調情人節，遠比上Google搜尋更有效率，有人招了。
-            h3 創作概念
-            p.description
-              | 但.....格子籠養雞是沒維護到雞權，這個副教授~~~還有臉為人師表嗎?廠商是怎樣~~把台灣球迷當凱子削喔!手段使盡卻判13年~~衝衝衝，變調情人節，鄧麗君鳳飛飛被消費，【有影片】對不起，的行為，大學副教授，這個要打馬嗎？
-            h3 衍生應用
-            p.description
-              | 的行為，AV女優大學開講，這個副教授~~~還有臉為人師表嗎?廠商是怎樣~~把台灣球迷當凱子削喔!手段使盡卻判13年~~衝衝衝，山獅被看門狗追，女愛吃青蛙鍋，這隻獅子也太糗了!各位勞工朋友，自家賣熱狗麵包，辱檢沒屁眼，前情侶臉書鬧翻，山獅被看門狗追，是不是撒嬌，變調情人節，無誤！
-        .one.wide.column
-          h2 新聞小幫手
-          p.item.meta
-            span.ui.horizontal.label 作者
-            span.text tuiry
-            a(href='')
-              i.icon.twitter
-            a(href='')
-              i.icon.facebook
-            a(href='')
-              i.icon.tumblr
-            a(href='')
-              i.icon.plus
-          p.item.meta
-            span.ui.horizontal.label 授權
-            span.text cc
-            a(href='')
-              i.icon.url
-          .item
-            .ui.teal.button
-              i.download.icon
-              | 下載工作檔
-            .text.file.meta
-              | PSD, 1920 x 1080 px, 1.5MB
-          .meta.group
-            .ui.horizontal.divider 關於
+  if project
+    .wrap
+      .ui.column.stackable.divided.grid
+        .row
+          .two.wide.column
+            .image
+              ul
+                each url,id in images
+                  li
+                    img(id=id,src=url)
+            .preview.clearfix
+              ul
+                each id,url in images
+                  li
+                    a(href='#'+id)
+                      img(src=url)
+            .description
+              .ui.horizontal.divider 作品簡介
+              each cat,catName in description
+                h3 #{catName}
+                p.description #{cat}
+          .one.wide.column
+            h2 #{project}
             p.item.meta
-              span.ui.horizontal.label 類型
-              span.text 插畫
+              span.ui.horizontal.label 作者
+              each info,name in authors
+                span.text #{name}
+                if info.twitter
+                  a(href=info.twitter)
+                  i.icon.twitter
+                if info.facebook
+                  a(href=info.facebook)
+                  i.icon.facebook
+                if info.thumblr
+                  a(href=info.thumblr)
+                  i.icon.thumblr
+                if info.plus
+                  a(href=info.plus)
+                  i.icon.plus
             p.item.meta
-              span.ui.horizontal.label 所屬領域
-              span.text g0v
-            p.item.meta
-              span.ui.horizontal.label 相關專案
-              span.text 新聞小幫手
-            p.item.meta
-              span.ui.horizontal.label 發表
-              span.text 2013.10.01
-            p.item.meta
-              span.ui.horizontal.label 更新
-              span.text 2013.10.01
+              span.ui.horizontal.label 授權
+              span.text #{license}
+              a(href='')
+                i.icon.url
+            .item
+              .ui.teal.button
+                i.download.icon
+                | 下載工作檔
+              .text.file.meta
+                | PSD, 1920 x 1080 px, 1.5MB
+            .meta.group
+              .ui.horizontal.divider 關於
+              p.item.meta
+                span.ui.horizontal.label 類型
+                span.text #{type}
+              p.item.meta
+                span.ui.horizontal.label 所屬領域
+                span.text #{field}
+              p.item.meta
+                span.ui.horizontal.label 相關專案
+                span.text #{project}
+              p.item.meta
+                span.ui.horizontal.label 發表
+                span.text #{publish}
+              p.item.meta
+                span.ui.horizontal.label 更新
+                span.text #{update}
 
 block footer
   .ui.labeled.icon.button.black
